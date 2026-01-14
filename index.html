@@ -135,10 +135,57 @@
       display: none !important;
     }
 
+    /* ===== Promotional Section ===== */
+    .promo-section {
+      max-width: 1100px;
+      margin: 0 auto 60px auto;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .promo-section h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .promo-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .promo-video video {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .promo-poster img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .promo-item h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .condo-hero {
         padding: 30px 15px;
+      }
+
+      .promo-content {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -153,6 +200,7 @@
       <ul class="nav-links">
         <li><button class="nav-btn" onclick="document.getElementById('welcome').scrollIntoView({behavior:'smooth'})">Home</button></li>
         <li><button class="nav-btn" onclick="document.getElementById('condo').scrollIntoView({behavior:'smooth'})">Condo Info</button></li>
+        <li><button class="nav-btn" onclick="document.getElementById('promo').scrollIntoView({behavior:'smooth'})">Promo</button></li>
       </ul>
     </div>
   </nav>
@@ -183,6 +231,26 @@
         estimated budget ranges, and key preparation steps before
         starting renovation works.
       </p>
+    </div>
+  </section>
+
+  <!-- Promotional Section -->
+  <section id="promo">
+    <div class="promo-section">
+      <h2>Promotional Materials</h2>
+      <div class="promo-content">
+        <div class="promo-item promo-video">
+          <h3>Promotional Video</h3>
+          <video controls autoplay muted loop>
+            <source src="../Condo%20Renovation%20AI%20Chatbot%20(1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="promo-item promo-poster">
+          <h3>Promotional Poster</h3>
+          <img src="../unnamed.jpg" alt="Condo Renovation Chatbot Poster">
+        </div>
+      </div>
     </div>
   </section>
 
